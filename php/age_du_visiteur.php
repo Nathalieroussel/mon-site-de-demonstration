@@ -1,0 +1,1 @@
+ <?php $age_du_visiteur=47; echo $age_du_visiteur;?>
