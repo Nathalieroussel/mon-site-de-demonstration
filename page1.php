@@ -1,3 +1,6 @@
+<!--***************************************************************page1.php = page cours PHP*************************************************************************-->
+
+
 <?php
 // On démarre la session AVANT d'écrire du code HTML
 session_start();
@@ -6,8 +9,12 @@ session_start();
 $_SESSION['prenom'] = 'Nathalie';
 $_SESSION['nom'] = 'Roussel';
 $_SESSION['age'] = 47;
-?>
 
+setcookie('pseudo', 'naty24', time() + 365*24*3600, null, null, false, true); // On écrit un cookie
+setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); // On écrit un autre cookie...
+
+?>
+    <!-----**********Fin code PHP (session et cookies) **********----->
 
 
 
@@ -27,6 +34,7 @@ $_SESSION['age'] = 47;
         <link href="css/main.css" rel="stylesheet">
         <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
+        <link href="css/prism.css" rel="stylesheet" />
 
         <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -83,7 +91,7 @@ $_SESSION['age'] = 47;
                     <li><a href="#get">GET</a></li>
                     <li><a href="#post">POST</a></li>
                     <li><a href="#sessions">Sessions</a></li>
-                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#cookies">Cookies</a></li>
 
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">TP COURS<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -880,8 +888,6 @@ $_SESSION['age'] = 47;
                                                 <a href="information.php" class="btn btn-success btn-md" role="button">Page information.php</a><br />
                                             </p>
                                         </div>
-
-
                                         <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                             <div class="col-sm-6 box1">
                                                 <h2><strong>session_destroy()</strong></h2>
@@ -891,22 +897,78 @@ $_SESSION['age'] = 47;
                                                 <a href="images/exemples_de_code/PHP/destroy.JPG" class="btn btn-danger btn-md" role="button">Voir le code PHP</a>
                                                 <h3>
                                                     Tu souhaites te déconnecter maintenant? <br>Pour cela, cliques sur le bouton "deconnexion".<br> Sinon tu seras déconnecté autommatiquement.</h3>
-                                                    <p>
-                                                        <a href="destroy.php" button class="btn btn-info btn-md"> Déconnexion </a></p>
-                                                
+                                                <p>
+                                                    <a href="destroy.php" button class="btn btn-info btn-md"> Déconnexion </a></p>
                                             </div>
                                         </div>
-
-
-
                                     </div>
                                 </div>
                             </div>
                         </section>
+                        <!-----**********Fin section sessions **********----->
 
 
 
 
+
+                        <!-----**********Début section cookies **********----->
+                        <section id="cookies">
+                            <div class="container">
+                                <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                    <div class="row">
+                                        <div class="text-center col-sm-12">
+                                            <h1>Les cookies</h1>
+                                            <h4>Ce sont des petits fichiers contenant du texte, que l'on enregistre sur l'ordinateur du visiteur. <br> Ils permettent de retenir des informations sur le visiteur. <br> Pour chaque information à retenir, un cookie est à créer. Il doit être écrit avant le code HTML.<br> Un cookie comme une variable est composé d'un nom et d'une valeur.</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container text-center">
+                                <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                    <div class="row session">
+                                        <div class="col-sm-6 box1">
+                                            <h2><strong>Ecrire et afficher un cookie </strong></h2>
+                                            <span class="sous_titre_session">(setcookie)</span>
+                                            <h5><em>Pour écire un cookie, on lui attribue 3 valeurs : un nom (ex: pseudo), une valeur (ex:naty24) et une date d'expiration ou timestamp () </em></h5>
+                                            <a href="images/exemples_de_code/PHP/cookie.JPG" class="btn btn-danger btn-md" role="button">Voir le code PHP</a>
+                                            <h3>
+                                                Pour afficher un cookie, on utilise <span class="sous_titre_session">$_COOKIE</span>
+                                            </h3>
+                                            <p>
+                                                Re-bonjour! Je me souviens de toi!<br /> Tu t'appelles
+                                                <?php echo $_COOKIE['pseudo']; ?> et tu viens de
+                                                <?php echo $_COOKIE['pays']; ?> c'est ça ?
+                                            </p>
+                                            <p>
+                                                <a href="images/exemples_de_code/PHP/afficher_cookie.JPG" class="btn btn-danger btn-md" role="button">Voir le code PHP</a>
+                                            </p>
+                                        </div>
+
+                                        <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                            <div class="col-sm-6 box2">
+                                                <p><span class="sous_titre_cookie">*Timestamp</span></p>
+                                                <h5><em>C'est la date d'expiration du cookie. Le timestamp est une valeur qui augmente de 1 toutes le secondes. Pour obtenir le timestamp actuel on fait appel à la fonction time(). 
+                                                <ul>
+                                                <li>Pour que le cookie soit supprimé dans 1 an : time() + 365*24*3600</li>
+                                                </ul></em></h5><br>
+                                                <span class="sous_titre_cookie">*Sécuriser son cookie avec le mode httpOnly</span>
+                                                <h5><em>Cette option permet de réduire drastiquement les risques de faille XSS sur votre site.
+                                                <ul>
+                                                <li>Pour que le cookie soit supprimé dans 1 an : time() + 365*24*3600</li>
+                                                </ul></em></h5><br>
+                                                <span class="sous_titre_cookie">*Modifier un cookie</span>
+                                                <h5><em>Il suffit de reprendre l'ancien cookie avec setcookie et de le modifier.
+                                                <ul>
+                                                <li>Le temps d'expiration est remis à zéro pour un an à partir de sa date de modification </li>
+                                                </ul> </em></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-----**********Fin section cookies **********----->
 
 
 
@@ -960,6 +1022,8 @@ $_SESSION['age'] = 47;
                         <script type="text/javascript" src="js/jquery.countTo.js"></script>
                         <script type="text/javascript" src="js/lightbox.min.js"></script>
                         <script type="text/javascript" src="js/main.js"></script>
+                        <script src="js/prism.js"></script>
+
 
 
     </body>
