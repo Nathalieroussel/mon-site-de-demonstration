@@ -5,9 +5,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
   line-height: 24px;
-  color: black;
+  
   
 }
 
@@ -725,11 +724,6 @@ ul.address {
 
 
 
-
-
-
-
-
 .box1 {
     background-color:orangered;
    margin: auto;
@@ -759,12 +753,6 @@ ul.address {
 
 
 
-
-
-
-
-
-
 .box2 {
      
    margin: auto;
@@ -782,6 +770,22 @@ ul.address {
     font-family:serif;
     font-style: oblique;
     text-align: left;
+}
+
+
+
+.title-content {
+    color:teal;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 20px;
+    
+}
+
+.tab-content {
+   text-align: left;
+
+    
 }
 
 
