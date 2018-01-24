@@ -6,11 +6,11 @@ http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascr
  * @author Lea Verou
  */
 
-code[class*="language-"],
+code[class*="language-"]
 pre[class*="language-"] {
-	color: black;
+	color: white;
 	background: none;
-	text-shadow: 0 1px white;
+	text-shadow: 0 8px black;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	text-align: left;
 	white-space: pre;
@@ -57,7 +57,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f5f2f0;
+	background: black;
 }
 
 /* Inline code */
@@ -137,6 +137,8 @@ pre[class*="language-"] {
 .token.entity {
 	cursor: help;
 }
+
+
 
 
 
