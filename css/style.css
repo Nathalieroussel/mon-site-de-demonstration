@@ -1,0 +1,90 @@
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+
+
+.messages {
+    background-color: black;
+    color: white;
+    font-family: inherit;
+    margin: auto;
+}
+
+
+.boite1 {
+  color: orangered;
+    width: 100%;  
+}
+
+
+.expression {
+    color: orangered;
+}
+
+
+.memento {
+    font-family: fantasy;
+}
+
+.pre {
+    background-color: orange;
+    font-size: 20px;
+    border-bottom-style:inset;
+    border-color: orangered;
+    color: brown;
+   text-align: center;
+   
+}
+
+.contenu {
+    text-align: left;   
+}
+
+.blockquote{
+    border-left-color: orangered;
+    color: black;
+}
+
+.press {
+    background: black;
+    width: 20%;
+    height:33px;
+    text-align:center;
+    font-size: 25px;
+}
+
+.contenu1 {
+    text-align: left; 
+}
+
+.press1 {
+    background: orange;
+    width: 100%;
+    height:33px;
+    text-align:center;
+    font-size: 25px;
+}
+
+.note {
+    border-bottom-color: aqua;
+}
+
+
+.press2 {
+    background:black;
+    width: 30%;
+    height:33px;
+    text-align:center;
+    font-size: 25px;
+}
+
+
+
+
+

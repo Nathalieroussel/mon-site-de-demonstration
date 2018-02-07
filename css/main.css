@@ -35,7 +35,7 @@ h3 {
 .parallax h4,
 .parallax h5,
 .parallax h6 {
-  color: #fff;
+  
 }
 
 .parallax input[type="text"],
@@ -789,36 +789,28 @@ ul.address {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#minichat {
-    background-color: dodgerblue;
-    color: aliceblue;
-    
+.messages {
+   background-color: black;
+    color: white;
+    font-family:inherit;
+    margin: auto; 
 }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+h1
+{
+    text-align:left;
+    color: coral;
+    font-size: 55px;
+}
+h3
+{
+    background-color:coral;
+    color:white;
+    font-size:0.9em;
+    margin-bottom:0px;
+}
+.news p
+{
+    background-color:#CCCCCC;
+    margin-top:0px;
+    
+}
+.news
+{
+    width:50%;
+    margin left: 0px;
+    padding-left: 2px;
+}
+
+a
+{
+    text-decoration:none;
+    color: blue;
+}
+
+
+
+.title_billets {
+    color: black;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+header
+{
+    background-color: khaki;
+    width: 50%;
+    
+}
+
+
+
+
+
+
+

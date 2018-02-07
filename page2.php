@@ -12,7 +12,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
 ?>
     <!-----**********Fin code PHP (session et cookies) **********----->
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
 
     <head>
         <meta charset="utf-8">
@@ -25,6 +25,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/lightbox.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="css/prism.css" rel="stylesheet" />
@@ -67,14 +68,11 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                     <li><a href="#structure_bdd">Structure base de données</a></li>
                     <li><a href="#section_pdo">PDO</a></li>
                     <li><a href="#requete_mysql">Requêtes MySQL</a></li>
-                    <li><a href="#fonctions">Fonctions</a></li>
-                    <li><a href="#get">GET</a></li>
-                    <li><a href="#post">POST</a></li>
-                    <li><a href="#sessions">Sessions</a></li>
-                    <li><a href="#cookies">Cookies</a></li>
+
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">TP COURS<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#minichat">Minichat</a></li>
+                            <li><a href="blog_TP/index.php">Blog avec commentaires</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -264,8 +262,8 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                     </div>
 
 
-                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="700ms">
-                                        <img src="images/requetes/requete_multiples.jpg" class="img-rounded">
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/requete-multiple.png" class="img-rounded">
                                         <div class="service-info">
                                             <h3>Afficher les champs "nom" et "possesseur" de la table</h3>
                                             <p><strong>SELECT (plusieurs champs)</strong></p>
@@ -275,8 +273,8 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                     </div>
 
 
-                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-                                        <img src="images/requetes/select_where.jpg" class="img-rounded">
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/select.where.png" class="img-rounded">
                                         <div class="service-info">
                                             <h3>Afficher uniquement les jeux appartenant à Patrick</h3>
                                             <p><strong>SELECT et WHERE</strong></p>
@@ -286,8 +284,8 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                     </div>
 
 
-                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1100ms">
-                                        <img src="images/requetes/orderby.png" class="img-rounded">
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/orderby.jpg" class="img-rounded">
                                         <div class="service-info">
                                             <h3>Afficher et trier les jeux vidéo par prix croissant</h3>
                                             <p><strong>ORDER BY</strong></p>
@@ -299,24 +297,109 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                             </div>
 
 
-                            <div class="row">
-                                <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1300ms">
-                                    <img src="images/requetes/limit.jpg" class="img-rounded">
-                                    <div class="service-info">
-                                        <h3>Afficher les 10 premiers résultats</h3>
-                                        <p><strong>LIMIT</strong></p>
-                                        <a href="jeux_video/jeux_video_limit.php" class="btn btn-warning" role="button">Voir le résultat</a>
-                                        <a href="images/exemples_de_code/SQL/limit.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                            <div class="jumbotron text-center">
+                                <div class="row">
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/limit.jpg" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Afficher les 10 premiers résultats</h3>
+                                            <p><strong>LIMIT</strong></p>
+                                            <a href="jeux_video/jeux_video_limit.php" class="btn btn-warning" role="button">Voir le résultat</a>
+                                            <a href="images/exemples_de_code/SQL/limit.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/insert_into.png" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Ajouter un jeu dans la base de donnée</h3>
+                                            <p><strong>INSERT INTO</strong></p>
+                                            <a href="#requete_mysql" class="btn btn-warning" role="button">Voir le résultat</a>
+                                            <a href="images/exemples_de_code/SQL/limit.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/upper.png" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Affiche les données en majuscules</h3>
+                                            <p><strong>UPPER (fonction scalaire)</strong></p>
+                                            <a href="jeux_video.php" class="btn btn-warning" role="button">Voir le résultat</a>
+                                            <a href="images/exemples_de_code/SQL/upper.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/lower.png" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Affiche les données en minuscules</h3>
+                                            <p><strong>LOWER (fonction scalaire)</strong></p>
+                                            <a href="images/exemples_de_code/SQL/lower.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms">
-                                    <img src="images/requetes/insert_into.png" class="img-rounded">
-                                    <div class="service-info">
-                                        <h3>Ajouter un jeu dans la base de donnée</h3>
-                                        <p><strong>INSERT INTO</strong></p>
-                                        <a href="jeux_video/jeux_video_limit.php" class="btn btn-warning" role="button">Voir le résultat</a>
-                                        <a href="images/exemples_de_code/SQL/limit.JPG" class="btn btn-danger" role="button">Voir le code</a>
+
+                            <div class="jumbotron text-center">
+                                <div class="row">
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/lenght.png" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Affiche le nombre de caractères des noms </h3>
+                                            <p><strong>LENGTH (fonction scalaire)</strong></p>
+                                            <a href="images/exemples_de_code/SQL/lenght.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/avg.png" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Calcule une valeur moyenne des prix</h3>
+                                            <p><strong>AVG (fonction d'agrégat)</strong></p>
+                                            <a href="images/exemples_de_code/SQL/avg.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/sum.jpg" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Calcule la valeur totale des prix</h3>
+                                            <p><strong>SUM (fonction d'agrégat)</strong></p>
+                                            <a href="images/exemples_de_code/SQL/sum.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/max.jpg" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Renvoie le prix maximal</h3>
+                                            <p><strong>MAX (fonction d'agrégat)</strong></p>
+                                            <a href="images/exemples_de_code/SQL/max.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="jumbotron text-center">
+                                <div class="row">
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/min.jpg" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Renvoie le prix minimal </h3>
+                                            <p><strong>MIN (fonction scalaire)</strong></p>
+                                            <a href="images/exemples_de_code/SQL/lenght.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <img src="images/requetes/avg.png" class="img-rounded">
+                                        <div class="service-info">
+                                            <h3>Compter le nombre d'entrées</h3>
+                                            <p><strong>COUNT (fonction scalaire)</strong></p>
+                                            <a href="images/exemples_de_code/SQL/count.JPG" class="btn btn-danger" role="button">Voir le code</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -327,48 +410,109 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
 
 
 
-                        <!-----********** Début section minichat **********----->
-                        <section id="minichat">
-                            <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <!-----********** Début section blog **********----->
+                        <section id="blog">
+                            <div class="container">
                                 <div class="row">
-                                    <div class="text-center col-sm-12">
-                                        <h1>Création d'un minichat simple </h1>
-                                        <p><img src="images/captures/minichat.JPG" class="img-responsive img-thumbnail"></p>
+                                    <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+                                        <h1>Des exemples de code</h1>
+                                        <h3>Réalisation de différents exercices directement demandés dans les cours ou création de codes personnels </h3>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="text-center col-sm-12 ">
 
-                                        <p> <a href="minichat.php" class="btn btn-warning btn-lg" role="button">Tester le minichat</a></p>
-                                        <a href="images/exemples_de_code/PHP/minichat.JPG" class="btn btn-danger" role="button">Voir le code minichat.php</a>
-                                        <a href="images/exemples_de_code/PHP/minichat_post.JPG" class="btn btn-danger" role="button">Voir le code minichat_post.php</a>
+
+                                <!--Post 1-->
+                                <div class="blog-posts">
+                                    <div class="row">
+                                        <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                                            <div class="post-thumb">
+                                                <a href="minichat/minichat.php"><img class="img-responsive" src="minichat/img/minichat.jpg" alt="post1"></a>
+                                            </div>
+                                            <div class="entry-header">
+                                                <h3><a href="minichat/minichat.php">Réalisation d'un minichat en PHP et SQL</a></h3>
+                                                <span class="date">31 janvier 2018</span>
+                                            </div>
+                                            <div class="entry-content">
+                                                <p>Minichat avec mémorisation du pseudo (cookies) et date et heure du message posté.</p>
+                                            </div>
+                                        </div>
+                                        <!--Post 1-->
+
+
+                                        <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                                            <div class="post-thumb">
+                                                <div id="post-carousel" class="carousel slide" data-ride="carousel">
+                                                    <ol class="carousel-indicators">
+                                                        <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
+                                                        <li data-target="#post-carousel" data-slide-to="1"></li>
+                                                        <li data-target="#post-carousel" data-slide-to="2"></li>
+                                                    </ol>
+                                                    <div class="carousel-inner">
+                                                        <div class="item active">
+                                                            <a href="#"><img class="img-responsive" src="images/blog/2.jpg" alt=""></a>
+                                                        </div>
+                                                        <div class="item">
+                                                            <a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a>
+                                                        </div>
+                                                        <div class="item">
+                                                            <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                                                    <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                                                </div>
+                                                <div class="post-meta">
+                                                    <span><i class="fa fa-comments-o"></i> 3 Comments</span>
+                                                    <span><i class="fa fa-heart"></i> 0 Likes</span>
+                                                </div>
+                                                <div class="post-icon">
+                                                    <i class="fa fa-picture-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="entry-header">
+                                                <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
+                                                <span class="date">June 26, 2014</span>
+                                                <span class="cetagory">in <strong>Photography</strong></span>
+                                            </div>
+                                            <div class="entry-content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
+                                            <div class="post-thumb">
+                                                <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
+                                                <div class="post-meta">
+                                                    <span><i class="fa fa-comments-o"></i> 3 Comments</span>
+                                                    <span><i class="fa fa-heart"></i> 0 Likes</span>
+                                                </div>
+                                                <div class="post-icon">
+                                                    <i class="fa fa-video-camera"></i>
+                                                </div>
+                                            </div>
+                                            <div class="entry-header">
+                                                <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
+                                                <span class="date">June 26, 2014</span>
+                                                <span class="cetagory">in <strong>Photography</strong></span>
+                                            </div>
+                                            <div class="entry-content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="load-more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                        <a href="#" class="btn-loadmore"><i class="fa fa-repeat"></i> Load More</a>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <!-----********** Fin section minichat  **********----->
-                        
-                       <section id="">
-                            <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                <div class="row">
-                                    <div class="text-center">
-                                        <h1>Création d'un minichat simple </h1>
-                                        <p><img src="images/captures/minichat.JPG" class="img-responsive img-thumbnail"></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="text-center col-sm-12 ">
+                        <!-----**********Fin section blog **********----->
 
-                                        <p> <a href="minichat.php" class="btn btn-warning btn-lg" role="button">Tester le minichat</a></p>
-                                        <a href="images/exemples_de_code/PHP/minichat.JPG" class="btn btn-danger" role="button">Voir le code minichat.php</a>
-                                        <a href="images/exemples_de_code/PHP/minichat_post.JPG" class="btn btn-danger" role="button">Voir le code minichat_post.php</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        
-                        
+
+
+
+
+
+
                         <script type="text/javascript" src="js/jquery.js"></script>
                         <script type="text/javascript" src="js/bootstrap.min.js"></script>
                         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>

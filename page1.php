@@ -32,6 +32,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/lightbox.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="css/prism.css" rel="stylesheet" />
@@ -79,11 +80,14 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                             <li><a href="#superglobales">Superglobales</a></li>
                         </ul>
                     </li>
-                    <li><a href="#conditions_et_boucles">Conditions et boucles while</a></li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Boucles<span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Autres <span class="caret"></span></a>
+
+
                         <ul class="dropdown-menu">
                             <li><a href="#boucles_for">Boucles For</a></li>
                             <li><a href="#boucle_foreach">Boucles Foreach</a></li>
+                            <li><a href="#image">Les images</a></li>
+                            <li><a href="#expressions">Les expressions régulières</a></li>
                         </ul>
                     </li>
                     <li><a href="#tableaux">Tableaux</a></li>
@@ -93,13 +97,16 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                     <li><a href="#sessions">Sessions</a></li>
                     <li><a href="#cookies">Cookies</a></li>
 
+
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">TP COURS<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#mdp">Page protégée par mot de passe</a></li>
                         </ul>
+
                     </li>
                 </ul>
             </div>
+
         </nav>
         <!-----**********/Menu de navigation page1.php **********----->
 
@@ -1009,6 +1016,276 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                             </div>
                         </section>
                         <!-----********** Fin section mdp (TP)**********----->
+
+
+                        <!-----********** les images en PHP **********----->
+                        <section id="image">
+                            <div class="container-fluid bg-3 text-center">
+                                <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                    <div class="row">
+                                        <div class="text-center col-sm-8 col-sm-offset-2">
+                                            <h1>Images en PHP</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h2>A partir d'une image vide <a href="php/image.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
+                                        <img src="images/exemples_de_code/PHP/image_vide.JPG" alt="Image" img class="img-responsive">
+                                        <p>Imagecreate</p>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <h2>A partir d'une image existante <a href="php/image.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
+                                        <img src="images/exemples_de_code/PHP/image_vide.JPG" alt="Image" img class="img-responsive">
+                                        <p>image.php</p>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <h2>Manipuler les couleurs <a href="php/couleurs.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
+                                        <img src="images/exemples_de_code/PHP/couleurs.JPG" alt="Image" img class="img-responsive">
+                                        <p>imagecolorallocate</p>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <h2>Texte horizontal dans image <a href="php/texte_image_horizontal.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
+                                        <img src="images/exemples_de_code/PHP/imagestring.JPG" alt="Image" img class="img-responsive">
+                                        <p>imagestring</p>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <h2>Texte vertical dans image <a href="php/texte_image_vertical.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
+                                        <img src="images/exemples_de_code/PHP/imagestringup.JPG" alt="Image" img class="img-responsive">
+                                        <p>imagestringup</p>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <h2>Rendre une image transparente <a href="php/image-transparente.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
+                                        <img src="images/exemples_de_code/PHP/colortransparent.JPG" alt="Image" img class="img-responsive">
+                                        <p>imagecolortransparent</p>
+                                    </div>
+
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        <h2>Mélanger 2 images <a href="http://localhost/copymerge/copymerge.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
+                                        <img src="images/exemples_de_code/PHP/copymerge.JPG" alt="Image" img class="img-responsive">
+                                        <p>copymerge</p>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <h2>Redimensionner une image <a href="http://localhost/copymerge/copymerge.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
+                                        <img src="images/exemples_de_code/PHP/copymerge.JPG" alt="Image" img class="img-responsive">
+                                        <p>imagecopyresampled</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+
+                        <section id="expressions">
+                            <div class="container-fluid expression text-center">
+                                <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                    <div class="row">
+                                        <div class="text-center">
+                                            <h1>Les expressions régulières (Regex)</h1>
+                                            <h2>(Langage PCRE)</h2>
+                                            <p> Constituent un système très puissant et très rapide pour faire des recherches dans des chaînes de caractères.<br/> Une regex est toujours entourée de caractères spéciaux appelés délimiteurs (ex: #)</p>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <h2><span class="memento">Memento</span></h2>
+                                        <div class="col-sm-4 col-sm-offset-2">
+
+                                            <img src="images/captures/regex1.JPG" alt="Image" img class="img-responsive">
+                                            <h3>Utilisation basique</h3>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <img src="images/captures/regex2.JPG" alt="Image" img class="img-responsive">
+                                            <h3>Classes de caractères</h3>
+                                        </div>
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <img src="images/captures/regex3.JPG" alt="Image" img class="img-responsive">
+                                            <h3>Les quantificateurs</h3>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="images/captures/regex3.JPG" alt="Image" img class="img-responsive">
+                                            <h3>Les quantificateurs</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <h2 class="memento">Les principales fonctions utilisant le langage PCRE</h2><br/>
+                                <div class="container-fluid">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press">preg_match</h2>
+                                            <blockquote class="blockquote">
+                                                <p>Cette fonction renvoie un booléen : <strong>VRAI ou FAUX </strong>(true ou false en anglais). Elle renvoie true (vrai) si elle a trouvé le mot que vous cherchiez dans la chaîne, false (faux) si elle ne l'a pas trouvé.</p><br/>
+                                                <img src="images/exemples_de_code/PHP/pregmatch.png" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera VRAI puisque "guitare" se trouve bien dans la phrase "j'aime la guitare"</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <blockquote class="blockquote">
+                                                <img src="images/exemples_de_code/PHP/pregmatchfaux.png" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX puisque "guitare" ne se trouve pas dans la phrase "j'aime le piano"</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <blockquote class="blockquote">
+                                                <img src="images/exemples_de_code/PHP/pregmatchfaux2.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX puisque "piano" ne se trouve pas dans la phrase "j'aime la guitare"</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press2">preg_match (avec option "i")</h2>
+                                            <blockquote class="blockquote">
+                                                <p>L'option "i" permet de ne pas faire la différence entre <strong>majuscule et minuscule </strong>. La regex ne fera plus attention à la casse.</p><br/>
+                                                <img src="images/exemples_de_code/PHP/pregmatchi.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera VRAI puisque "PIANO" se trouve bien dans la phrase "j'aime le piano", même s'il est écrit en MAJUSCULE.</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid ">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press2">preg_match (avec option "OU")</h2>
+                                            <blockquote class="blockquote">
+                                                <p>L'option <strong>"OU" </strong> permet de rechercher un mot ou un autre. La regex répondra vrai si l'un ou l'autre des mots est trouvé.</p><br/>
+                                                <img src="images/exemples_de_code/PHP/pregmatchou.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX puisque aucun des mots proposés ne se trouvent dans la phrase "j'aime jouer du tambour"</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid ">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press2">Indiquer le début d'une chaîne </h2>
+                                            <blockquote class="blockquote">
+                                                <p> <strong>L'accent circonflexe (^) </strong> indique le début d'une chaîne. En plaçant le symbole devant le mot, alors celui-ci devra se trouver au début de la châine sinon la réponse sera FAUX.</p><br/>
+                                                <img src="images/exemples_de_code/PHP/debutdechaine.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX le mot "banjo" apparait dans la phrase mais n'est pas situé au début.</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid ">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press2">Indiquer la fin d'une chaîne</h2>
+                                            <blockquote class="blockquote">
+                                                <p> <strong>Le symbole dollar ($) </strong> indique la fin d'une chaîne. En plaçant le symbole après le mot, alors celui-ci devra se trouver à la fin de la châine sinon la réponse sera FAUX.</p><br/>
+                                                <img src="images/exemples_de_code/PHP/findechaine.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX le mot "banjo" apparait dans la phrase mais n'est pas le dernier mot de la phrase.</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid ">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press2">Les classes de caractères</h2>
+                                            <blockquote class="blockquote">
+                                                <p>Elles sont toujours indiquées entre crochets.</p><br/>
+                                                <h3><strong>Exemple 1 :</strong> On demande à la regex si la chaine de caractères comprend le mot "gras", "gros" ou "gris".</h3>
+                                                <img src="images/exemples_de_code/PHP/exemple1.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera VRAI puisque le mot "gris" apparaît dans la phrase (peu importe l'emplacement de celui-ci)</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <blockquote class="blockquote">
+                                                <h3><strong>Exemple 2 :</strong> On demande à la regex si la chaine de caractères comprend le mot "gras", "gros" ou "gris" et si elle se situe en fin de chaîne.</h3>
+                                                <img src="images/exemples_de_code/PHP/exemple2.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX puisque le mot "gras" apparaît dans la phrase mais ne ne situe pas en fin de chaîne.</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <blockquote class="blockquote">
+                                                <h3><strong>Exemple 3 :</strong> On demande à la regex si la chaine de caractères se termine par une voyelle.</h3>
+                                                <img src="images/exemples_de_code/PHP/exemple3.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera VRAI puisque la chaine se termine par la lettre "o" (voyelle).</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                      <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <blockquote class="blockquote">
+                                                <h3><strong>Exemple 4 :</strong> On demande à la regex si la chaine de caractères commence par une voyelle.</h3>
+                                                <img src="images/exemples_de_code/PHP/exemple4.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX puisque la chaine commence par une consonne (J).</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid ">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press2">Les intervalles de classe</h2>
+                                            <blockquote class="blockquote">
+                                                <p>Elles permettent de délimiter des recherches sur une chaîne. Elles sont toujours indiquées entre crochets <code class="coder">avec un tiret (-)</code>.<br/>Il est possible d'écrire 2 plages dans une même classe entre crochets.</p>
+                                               
+                                                <h3><strong>Est-ce que cette chaîne de caractères contient des lettres minuscules?</strong> </h3>
+                                                <img src="images/exemples_de_code/PHP/exemple5.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX la chaîne de caractères contient des lettres mais toutes en MAJUSCULES.</button>
+                                                <h5><em>Il aurait fallu écrire une regex de type <code>[A-Z]</code>pour que le résultat affiche VRAI.</em></h5>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    
+                                <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <blockquote class="blockquote">
+                                                <h3><strong>Est-ce que cette chaîne de caractères contient des lettres majuscules ou des chiffres?</strong> </h3>
+                                                <img src="images/exemples_de_code/PHP/exemple6.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera VRAI car la chaîne de caractères contient des chiffres.</button>
+                                                <h5><em>S'il n'y avait pas eu de chiffres, le résultat aurait été FAUX car toutes les lettres étaient en minuscule.</em></h5>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    
+                                <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <blockquote class="blockquote">
+                                                <h3><strong>Est-ce que cette chaîne de caractères contient des lettres majuscules ou des chiffres?</strong> </h3>
+                                                <img src="images/exemples_de_code/PHP/exemple6.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera VRAI car la chaîne de caractères contient des chiffres.</button>
+                                                <h5><em>S'il n'y avait pas eu de chiffres, le résultat aurait été FAUX car toutes les lettres étaient en minuscule.</em></h5>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </section>
+
+
+
+
+
+
+
 
 
 
