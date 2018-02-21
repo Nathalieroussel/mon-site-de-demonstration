@@ -1,0 +1,86 @@
+a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.tab .nav-tabs{
+    position: relative;
+    border-bottom: none;
+}
+.tab .nav-tabs li{
+    margin: 0 41px 0 0;
+    z-index: 1;
+}
+.tab .nav-tabs li:after{
+    content: "";
+    width: 50%;
+    border: 3px solid #ed5a46;
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    z-index: -1;
+}
+.tab .nav-tabs li:last-child:after{
+    border: none;
+}
+.tab .nav-tabs li a{
+    display: block;
+    width: 120px;
+    height: 120px;
+    line-height: 115px;
+    border-radius: 50%;
+    background: #e9dcbb;
+    font-size: 20px;
+    color: #ea1c24;
+    padding: 0;
+    margin-right: 0;
+    text-align: center;
+    border: 5px solid #ed5a46;
+}
+.tab .nav-tabs li.active a{
+    background: #6c6c6c;
+    color: #e9dcbb;
+    border: 5px solid #ed5a46;
+    position: relative;
+}
+.tab .nav-tabs li.active a:after{
+    content: "\f107";
+    font-family: fontawesome;
+    font-size: 40px;
+    color: #ed5a46;
+    position: absolute;
+    bottom: -83px;
+    left: 38%;
+}
+.tab .tab-content{
+    font-size: 14px;
+    color: #e9dcbb;
+    line-height: 26px;
+    background: #6c6c6c;
+    padding: 20px 30px;
+    margin-top: 50px;
+}
+.tab .tab-content h3{
+    font-size: 24px;
+    color: #e9dcbb;
+    margin-top: 10px;
+}
+@media only screen and (max-width: 767px){
+    .tab .nav-tabs li{ margin: 0 25px 0 0; }
+    .tab .nav-tabs li a{
+        width: 90px;
+        height: 90px;
+        line-height: 85px;
+        font-size: 15px;
+    }
+    .tab .nav-tabs li.active a:after{
+        font-size: 30px;
+        bottom: -63px;
+    }
+    .tab .tab-content{ margin-top: 40px; }
+}
+@media only screen and (max-width: 480px){
+    .tab .nav-tabs li{ margin-bottom: 3px; }
+    .tab .nav-tabs li:after{ border: none; }
+    .tab .nav-tabs li.active a:after{ content: ""; }
+    .tab .tab-content{ margin-top: 10px; }
+}

@@ -127,10 +127,7 @@ jQuery(function ($) {
         });
     });
 
-    
-    
-    
-    //Google Map
+   //Google Map
     var latitude = $('#google-map').data('latitude')
     var longitude = $('#google-map').data('longitude')
 
@@ -157,4 +154,7 @@ jQuery(function ($) {
     google.maps.event.addDomListener(window, 'load', initialize_map);
 
 });
-
+    
+    
+   
+ 

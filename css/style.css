@@ -1,4 +1,4 @@
-input[type=text] {
+.input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -43,7 +43,7 @@ input[type=text] {
 }
 
 .contenu {
-    text-align: left;   
+    text-align: left; 
 }
 
 .blockquote{
@@ -85,6 +85,74 @@ input[type=text] {
 }
 
 
+.mvc {
+    color: navy;
+    font-size: 20px;
+}
+
+.titre-important {
+    color: orangered;
+   
+    
+}
+
+.encart {
+    background-color:gainsboro;
+  color: green;
+    font-weight: 800px;
+    font-size: 20px;
+}
 
 
 
+code {
+    background-color: darkgreen;
+    color: white;
+ 
+}
+
+.boitedetexte {
+    background-color:gainsboro;
+    width: 900px;
+  padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+  
+   
+}
+
+.titledescription {
+    font-size: 21px;
+    font-weight: bold;
+    color:firebrick;
+}
+
+.testeur {
+    background-color: dimgray;
+  
+}
+
+
+
+.description {
+    font-size: 17px;
+}
+
+
+.color {
+    color: green;
+    font-size: 21px;
+    font-style: bold;
+}
+
+.color2 {
+    color: green;
+    font-size: 19px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.color3 {
+    font-size: 19px;
+    
+}

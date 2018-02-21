@@ -1,5 +1,5 @@
 <?php
-if (preg_match("#[A-P0-9]#", "je suis en formation depuis 2017!"))
+if (preg_match("#[^0-9]#", "878979788"))
 {
     echo 'VRAI';
 }

@@ -19,7 +19,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
 
 
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
 
     <head>
         <meta charset="utf-8">
@@ -35,7 +35,10 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
         <link href="css/style.css" rel="stylesheet">
         <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
-        <link href="css/prism.css" rel="stylesheet" />
+        <link href="css/backtotop.css" rel="stylesheet">
+        <link href="css/prism.css" rel="stylesheet">
+        <link href="css/design.css" rel="stylesheet">
+        <link href="css/tabulation.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -44,6 +47,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel=”stylesheet” id=”font-awesome-css” href=”//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css” type=”text/css” media=”screen”>
     </head>
 
 
@@ -51,6 +55,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
 
 
         <!-----**********Début Présentation page1.php **********----->
+
         <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">Qu'est ce que PHP?</h1>
@@ -80,16 +85,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                             <li><a href="#superglobales">Superglobales</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Autres <span class="caret"></span></a>
 
-
-                        <ul class="dropdown-menu">
-                            <li><a href="#boucles_for">Boucles For</a></li>
-                            <li><a href="#boucle_foreach">Boucles Foreach</a></li>
-                            <li><a href="#image">Les images</a></li>
-                            <li><a href="#expressions">Les expressions régulières</a></li>
-                        </ul>
-                    </li>
                     <li><a href="#tableaux">Tableaux</a></li>
                     <li><a href="#fonctions">Fonctions</a></li>
                     <li><a href="#get">GET</a></li>
@@ -97,13 +93,26 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                     <li><a href="#sessions">Sessions</a></li>
                     <li><a href="#cookies">Cookies</a></li>
 
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Divers<span class="caret"></span></a>
 
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">TP COURS<span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#boucles_for">Boucles For</a></li>
+                            <li><a href="#boucle_foreach">Boucles Foreach</a></li>
+                            <li><a href="#image">Les images</a></li>
+                            <li><a href="#expressions">Les expressions régulières (PCRE)</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">TP/Exercices<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#mdp">Page protégée par mot de passe</a></li>
+                            <li><a href="#regex">Exemples de regex</a></li>
                         </ul>
 
                     </li>
+
                 </ul>
             </div>
 
@@ -993,7 +1002,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                     </div>
                                 </div>
 
-                                <!--/Page protégée par mot de passe ------>
+                                <!--Début section page page protégée par mot de passe ------>
                                 <div class=" text-center our-services">
                                     <div class="row">
                                         <div class="col-sm-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
@@ -1010,15 +1019,14 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                             <a href="images/exemples_de_code/PHP/secret.JPG" class="btn btn-success" role="button">Code page1.php</a>
                                             <a href="images/exemples_de_code/PHP/code_secret.JPG" class="btn btn-danger" role="button">Code secret.php</a>
                                         </div>
-                                        <!--/Page protégée par mot de passe ------>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <!-----********** Fin section mdp (TP)**********----->
+                        <!-----********** Fin section page protégée par mot de passe  **********----->
 
 
-                        <!-----********** les images en PHP **********----->
+                        <!-----********** Début section les images en PHP **********----->
                         <section id="image">
                             <div class="container-fluid bg-3 text-center">
                                 <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -1028,9 +1036,6 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                         </div>
                                     </div>
                                 </div>
-
-
-
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <h2>A partir d'une image vide <a href="php/image.php" button type="button" class="btn btn-primary btn-md">Voir le résultat</a> </h2>
@@ -1082,9 +1087,10 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                 </div>
                             </div>
                         </section>
+                        <!-----********** Fin section les images en PHP **********----->
 
 
-
+                        <!-----********** Début section les expressions régulières (regex)  **********----->
                         <section id="expressions">
                             <div class="container-fluid expression text-center">
                                 <div class="heading wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -1095,9 +1101,6 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                             <p> Constituent un système très puissant et très rapide pour faire des recherches dans des chaînes de caractères.<br/> Une regex est toujours entourée de caractères spéciaux appelés délimiteurs (ex: #)</p>
                                         </div>
                                     </div>
-
-
-
                                     <div class="row">
                                         <h2><span class="memento">Memento</span></h2>
                                         <div class="col-sm-4 col-sm-offset-2">
@@ -1120,9 +1123,8 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <h2 class="memento">Les principales fonctions utilisant le langage PCRE</h2><br/>
+                                <h2>1°) Les fonctions de recherche (preg_match)</h2>
                                 <div class="container-fluid">
                                     <div class="row boite1">
                                         <div class="col-sm-10 col-sm-offset-2 contenu ">
@@ -1230,7 +1232,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                             </blockquote>
                                         </div>
                                     </div>
-                                      <div class="row boite1">
+                                    <div class="row boite1">
                                         <div class="col-sm-10 col-sm-offset-2 contenu ">
                                             <blockquote class="blockquote">
                                                 <h3><strong>Exemple 4 :</strong> On demande à la regex si la chaine de caractères commence par une voyelle.</h3>
@@ -1246,7 +1248,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                             <h2 span class="press2">Les intervalles de classe</h2>
                                             <blockquote class="blockquote">
                                                 <p>Elles permettent de délimiter des recherches sur une chaîne. Elles sont toujours indiquées entre crochets <code class="coder">avec un tiret (-)</code>.<br/>Il est possible d'écrire 2 plages dans une même classe entre crochets.</p>
-                                               
+
                                                 <h3><strong>Est-ce que cette chaîne de caractères contient des lettres minuscules?</strong> </h3>
                                                 <img src="images/exemples_de_code/PHP/exemple5.PNG" alt="Image" img class="img-responsive">
                                                 <button type="button" class="btn btn-danger btn-md">Affichera FAUX la chaîne de caractères contient des lettres mais toutes en MAJUSCULES.</button>
@@ -1254,8 +1256,8 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                             </blockquote>
                                         </div>
                                     </div>
-                                    
-                                <div class="row boite1">
+
+                                    <div class="row boite1">
                                         <div class="col-sm-10 col-sm-offset-2 contenu ">
                                             <blockquote class="blockquote">
                                                 <h3><strong>Est-ce que cette chaîne de caractères contient des lettres majuscules ou des chiffres?</strong> </h3>
@@ -1265,41 +1267,183 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                             </blockquote>
                                         </div>
                                     </div>
-                                    
-                                <div class="row boite1">
+
+                                    <div class="row boite1">
                                         <div class="col-sm-10 col-sm-offset-2 contenu ">
                                             <blockquote class="blockquote">
-                                                <h3><strong>Est-ce que cette chaîne de caractères contient des lettres majuscules ou des chiffres?</strong> </h3>
-                                                <img src="images/exemples_de_code/PHP/exemple6.PNG" alt="Image" img class="img-responsive">
-                                                <button type="button" class="btn btn-danger btn-md">Affichera VRAI car la chaîne de caractères contient des chiffres.</button>
-                                                <h5><em>S'il n'y avait pas eu de chiffres, le résultat aurait été FAUX car toutes les lettres étaient en minuscule.</em></h5>
+                                                <h3><strong>Si l'on ne veut pas des caractères émunérés dans sa classe, on doit utiliser le symbole <code>accent circonflexe (^)au dessus de la classe.</code></strong> </h3>
+                                                <img src="images/exemples_de_code/PHP/exemple7.PNG" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera FAUX car la chaîne de caractères contient UNIQUEMENT des chiffres.</button>
                                             </blockquote>
                                         </div>
                                     </div>
                                 </div>
-                            
+                                <div class="container-fluid ">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press2">Les quantificateurs</h2>
+                                            <blockquote class="blockquote">
+                                                <p>Ce sont des symboles qui permettent de dire combien de fois peuvent se répéter un caractère ou une suite de caractères.
+                                                    <pre><code><strong>Par exemple</strong>, pour reconnaître une adresse e-mail comme francois@free.fr, il va falloir dire : « Elle commence par une ou plusieurs lettres, suivie(s) d'une@ (arobase), suivie de deux lettres au moins, elles-mêmes suivies d'un point, et enfin de deux à quatre lettres (pour le.fr,.com, mais aussi.info.</code></pre><br/>
+                                                    <p><strong>Les points d'interrogation<code>?</code></strong> </p>
+                                                    <h3>Indique que la lettre est facultative. Elle peut y être 0 ou 1 fois.</h3><br/>
+                                                    <p><strong>Les signes<code>+</code></strong> </p>
+                                                    <h3>Indique que la lettre est obligatoire. Elle doit apparaître 1 ou plusieurs fois.</h3><br/>
+                                                    <p><strong>Les étoiles<code>*</code></strong> </p>
+                                                    <h3>Indique que la lettre est facultative. Elle peut apparaître 0, 1 ou plusieurs fois.</h3><br/>
+
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-lg-10">
+                                                                <div class="tab" role="tabpanel">
+                                                                    <!-- Nav tabs -->
+                                                                    <ul class="nav nav-tabs" role="tablist">
+                                                                        <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Exemple 1</a></li>
+                                                                        <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Exemple 2</a></li>
+                                                                        <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Exemple 3</a></li>
+                                                                        <li role="presentation"><a href="#Section4" aria-controls="messages" role="tab" data-toggle="tab">Exemple 4</a></li>
+                                                                        <li role="presentation"><a href="#Section5" aria-controls="messages" role="tab" data-toggle="tab">Exemple 5</a></li>
+                                                                    </ul>
+                                                                    <!-- Tab panes -->
+                                                                    <div class="tab-content tabs">
+                                                                        <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                                                                            <h3>#bor?is#</h3>
+                                                                            <p>Ici la lettre "r" est facultative puisque le point d'interrogation est situé juste après.<br/> Cette regex reconnaitra donc le mot "bois" ou/et "boris".</p>
+                                                                        </div>
+                                                                        <div role="tabpanel" class="tab-pane fade" id="Section2">
+                                                                            <h3>#chiens?#</h3>
+                                                                            <p>Le point d'interrogation est situé juste après la lettre "s" ce qui implique que le "s" est facultatif. <br/> La regex reconnaitra donc le mot "chien" ou "chiens".</p>
+                                                                        </div>
+                                                                        <div role="tabpanel" class="tab-pane fade" id="Section3">
+                                                                            <h3>#^Yaho+$#</h3>
+                                                                            <p>Cette regex indique que la chaîne doit commencer '^' et finir '$' par le mot "Yaho" avec un ou plusieurs 'o' (exemple: Yahoo, Yahooooooo et Yaho retourneront VRAI)</p>
+                                                                        </div>
+                                                                        <div role="tabpanel" class="tab-pane fade" id="Section4">
+                                                                            <h3>#^Bla(bla)*$#</h3>
+                                                                            <p>Cette regex utilise des paranthèses pour indiquer que "bla" peut être répété 0,1 ou plusieurs fois. Cela signifie que la chaîne de caractères doit commencer par "Bla" et se terminer une à plusieurs fois par "bla" ou pas du tout.<br/> </p>
+                                                                        </div>
+                                                                        <div role="tabpanel" class="tab-pane fade" id="Section5">
+                                                                            <h3>#^[0-9]{6}$#</h3>
+                                                                            <p>Cette regex utilise des accolades pour indiquer combien de fois doivent être répété les chiffres. Cela revient à dire, que cette chaine de caractères est numérique et doit contenir uniquement 6 chiffres.<br/> </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid ">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press2">Quelques métacaractères</h2>
+                                            <blockquote class="blockquote">
+                                                <div class="container" style="margin-top:50px;">
+                                                    <div class="tab-content custom-tab-content">
+                                                        <div>
+                                                            <ul class="nav nav-tabs custom-tab" role="tablist">
+                                                                <li role="presentation" class="active"><a href="#point" aria-controls="home" role="tab" data-toggle="tab"><span class="link-lable">Le point (.)</span></a></li>
+                                                                <li role="presentation"><a href="#antislash" aria-controls="messages" role="tab" data-toggle="tab"><span class="link-lable">L'antislah (\)</span></a></li>
+                                                            </ul>
+                                                            <div class="tab-content">
+                                                                <div role="tabpanel" class="tab-pane fade in active" id="point">
+                                                                    <h2 span class="tabulation">Pour faire une recherche de n'importe quel caractère dans une chaîne</h2>
+                                                                    <h3 span class="meta"> Exemple : Qu'il y ai n'importe quel caractère dans la chaine ou que celle-ci soit vide, la réponse sera VRAI.
+                                                                        <pre class="precode"><code>(preg_match ('#.#, 'kdqfqljflkflj')) ou (preg_match ('#.#, ' '))</code></pre>
+                                                                    </h3>
+                                                                    <h2 span class="tabulation">Pour rechercher n'importe quel caractère mais limité </h2>
+                                                                    <h3 span class="meta">Exemple : La réponse sera VRAI, puisque j'ai bien 3 caractères quels qu'ils soient dans ma chaîne.
+                                                                        <pre class="precode"><code>(preg_match ('#.{3}#, '012'))</code></pre>
+                                                                    </h3>
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane fade" id="antislash">
+                                                                    <h2 span class="tabulation">Il sert à échapper et se place devant les principaux métacaractères pour ne pas les interprèter comme des symboles spéciaux mais comme un caractère de la chaîne.</h2>
+                                                                    <h3 span class="meta"> Exemple 1 : Je veux rechercher <code>impatient!</code> dans la chaîne de caractères <code>"Je suis impatient!"</code>, j'écrirai donc la regex :
+                                                                        <pre class="precode"><code>(preg_match ('#impatient \!#', 'Je suis impatient!')) </code></pre>
+                                                                    </h3>
+                                                                    <h3 span class="meta">Exemple 2 : Je veux rechercher <code>(très) fatiguée</code> dans la chaîne de caractères <code>Je suis (très) fatiguée</code>, j'écrirai donc la regex:
+                                                                        <pre class="precode"><code>(preg_match ('#\(très\) fatiguée#, 'Je suis (très)fatiguée'))</code></pre>
+                                                                    </h3>
+                                                                    <h3 span class="meta">Exemple 3 : Je veux rechercher <code>sommeil...</code> dans la chaîne de caractères <code>J'ai sommeil...</code>, j'écrirai donc la regex:
+                                                                        <pre class="precode"><code>(preg_match ('#sommeil\.\.\.#, 'J'ai sommeil...))</code></pre>
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="container-fluid expression text-center">
+                                <h2>2°) Les fonctions de remplacement (preg_replace)</h2>
+                                <div class="container-fluid">
+                                    <div class="row boite1">
+                                        <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                            <h2 span class="press">preg_match</h2>
+                                            <blockquote class="blockquote">
+                                                <p>Cette fonction renvoie un booléen : <strong>VRAI ou FAUX </strong>(true ou false en anglais). Elle renvoie true (vrai) si elle a trouvé le mot que vous cherchiez dans la chaîne, false (faux) si elle ne l'a pas trouvé.</p><br/>
+                                                <img src="images/exemples_de_code/PHP/pregmatch.png" alt="Image" img class="img-responsive">
+                                                <button type="button" class="btn btn-danger btn-md">Affichera VRAI puisque "guitare" se trouve bien dans la phrase "j'aime la guitare"</button>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
                         </section>
+                        <!-----********** Fin section les expressions régulières (regex)  **********----->
+
+
+                        <!-----********** Début section exemples de regex  **********----->
+                        <section id="regex">
+                            <div class=" text-center our-services">
+                                <h1>Construire une regex complète</h1>
+                                <div class="row">
+                                    <div class="col-sm-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
+                                        <div class="container-fluid ">
+                                            <div class="row ">
+                                                <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                                    <h2>Vérifier la validité d'un numéro de téléphone</h2>
+                                                    <img src="images/exemples_de_code/PHP/regex_telephone.PNG" alt="Image" img class="img-responsive">
+                                                    <p></p><a href="php/regex_telephone.php" button type="button" class="btn btn-success btn-md">TESTER</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container-fluid ">
+                                            <div class="row ">
+                                                <div class="col-sm-10 col-sm-offset-2 contenu ">
+                                                    <h2>Tester une adresse email</h2>
+                                                    <img src="images/exemples_de_code/PHP/regex_telephone.PNG" alt="Image" img class="img-responsive">
+                                                    <p></p><a href="php/regex_mail.php" button type="button" class="btn btn-success btn-md">TESTER</a>
+                                                </div>
+                                            </div>
+                                            <!-----********** Fin section exemples de regex  **********----->
 
 
 
 
 
 
+                                            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+                                            <script type="text/javascript" src="js/jquery.js"></script>
+                                            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+                                            <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+                                            <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+                                            <script type="text/javascript" src="js/wow.min.js"></script>
+                                            <script type="text/javascript" src="js/mousescroll.js"></script>
+                                            <script type="text/javascript" src="js/smoothscroll.js"></script>
+                                            <script type="text/javascript" src="js/jquery.countTo.js"></script>
+                                            <script type="text/javascript" src="js/lightbox.min.js"></script>
+                                            <script type="text/javascript" src="js/main.js"></script>
+                                            <script src="js/prism.js"></script>
+                                            <script type="text/javascript" src="js/backtotop.js"></script>
 
 
-
-
-                        <script type="text/javascript" src="js/jquery.js"></script>
-                        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-                        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-                        <script type="text/javascript" src="js/jquery.inview.min.js"></script>
-                        <script type="text/javascript" src="js/wow.min.js"></script>
-                        <script type="text/javascript" src="js/mousescroll.js"></script>
-                        <script type="text/javascript" src="js/smoothscroll.js"></script>
-                        <script type="text/javascript" src="js/jquery.countTo.js"></script>
-                        <script type="text/javascript" src="js/lightbox.min.js"></script>
-                        <script type="text/javascript" src="js/main.js"></script>
-                        <script src="js/prism.js"></script>
 
 
 

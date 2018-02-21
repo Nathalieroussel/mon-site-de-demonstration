@@ -29,6 +29,8 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
         <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="css/prism.css" rel="stylesheet" />
+        <link href="css/backtotop.css" rel="stylesheet" />
+        
         <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -411,23 +413,16 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
 
 
                         <!-----********** Début section blog **********----->
-                        <section id="blog">
-                            <div class="container">
+                        <section id="minichat">
+                            <div class="container text-center">
                                 <div class="row">
                                     <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-                                        <h1>Des exemples de code</h1>
-                                        <h3>Réalisation de différents exercices directement demandés dans les cours ou création de codes personnels </h3>
+                                        <h1>Mini-chat amélioré</h1>
                                     </div>
                                 </div>
-
-
-                                <!--Post 1-->
                                 <div class="blog-posts">
                                     <div class="row">
-                                        <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-                                            <div class="post-thumb">
-                                                <a href="minichat/minichat.php"><img class="img-responsive" src="minichat/img/minichat.jpg" alt="post1"></a>
-                                            </div>
+                                        <div class="col-sm-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
                                             <div class="entry-header">
                                                 <h3><a href="minichat/minichat.php">Réalisation d'un minichat en PHP et SQL</a></h3>
                                                 <span class="date">31 janvier 2018</span>
@@ -436,78 +431,15 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                                                 <p>Minichat avec mémorisation du pseudo (cookies) et date et heure du message posté.</p>
                                             </div>
                                         </div>
-                                        <!--Post 1-->
-
-
-                                        <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-                                            <div class="post-thumb">
-                                                <div id="post-carousel" class="carousel slide" data-ride="carousel">
-                                                    <ol class="carousel-indicators">
-                                                        <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
-                                                        <li data-target="#post-carousel" data-slide-to="1"></li>
-                                                        <li data-target="#post-carousel" data-slide-to="2"></li>
-                                                    </ol>
-                                                    <div class="carousel-inner">
-                                                        <div class="item active">
-                                                            <a href="#"><img class="img-responsive" src="images/blog/2.jpg" alt=""></a>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-                                                        </div>
-                                                    </div>
-                                                    <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                                                    <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-                                                </div>
-                                                <div class="post-meta">
-                                                    <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                                                    <span><i class="fa fa-heart"></i> 0 Likes</span>
-                                                </div>
-                                                <div class="post-icon">
-                                                    <i class="fa fa-picture-o"></i>
-                                                </div>
-                                            </div>
-                                            <div class="entry-header">
-                                                <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-                                                <span class="date">June 26, 2014</span>
-                                                <span class="cetagory">in <strong>Photography</strong></span>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
-                                            <div class="post-thumb">
-                                                <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-                                                <div class="post-meta">
-                                                    <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                                                    <span><i class="fa fa-heart"></i> 0 Likes</span>
-                                                </div>
-                                                <div class="post-icon">
-                                                    <i class="fa fa-video-camera"></i>
-                                                </div>
-                                            </div>
-                                            <div class="entry-header">
-                                                <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-                                                <span class="date">June 26, 2014</span>
-                                                <span class="cetagory">in <strong>Photography</strong></span>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="load-more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-                                        <a href="#" class="btn-loadmore"><i class="fa fa-repeat"></i> Load More</a>
                                     </div>
                                 </div>
                             </div>
                         </section>
+
+                                       
                         <!-----**********Fin section blog **********----->
 
-
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 
@@ -524,6 +456,7 @@ setcookie('pays', 'Périgueux', time() + 365*24*3600, null, null, false, true); 
                         <script type="text/javascript" src="js/lightbox.min.js"></script>
                         <script type="text/javascript" src="js/main.js"></script>
                         <script src="js/prism.js"></script>
+                         <script type="text/javascript" src="js/backtotop.js"></script>
     </body>
 
     </html>
